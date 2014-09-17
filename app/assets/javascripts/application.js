@@ -16,4 +16,7 @@
 //= require angular-route.min.js
 
 //= require bootstrap.min.js
+//= require welcome
+//= require controllers/good/helpFeed1
+
 //= require_tree .

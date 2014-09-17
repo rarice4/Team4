@@ -1,3 +1,6 @@
+#= require_self
+#= require_tree ./helpFeed
+
 angular.module("helpFeed",
    ["ngRoute"
     ])
@@ -6,15 +9,15 @@ angular.module("helpFeed",
 
    $routeProvider
         .when("/", {
-           templateUrl: "",
+           templateUrl: "../assets/helpFeed.html",
            controller: "helpFeedCtrl"
         })
         .when("/helpFeed", {
-            templateUrl: "views/helpView/helpFeed.html",
+            templateUrl: "views/helpFeed.html",
             controller: "helpFeedCtrl"
         })
         .when("/helpFeed:id", {
-            templateUrl: "views/helpView/helpShow.html",
+            templateUrl: "views/helpShow.html",
             controller: "helpFeedCtrl"
         })
         .otherwise({
