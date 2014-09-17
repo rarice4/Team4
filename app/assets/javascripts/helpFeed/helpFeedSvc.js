@@ -1,7 +1,7 @@
 angular.module("helpFeed")
     .factory("helpFeedSvc", function ($rootScope, $log, $http) {
 
-      var urlHelp = "http://localhost:3000";
+      var urlHelp = "localhost:3000/user";
 
       var getHelps = function () {
         return $http.get(urlHelp + "/" + "posts");
