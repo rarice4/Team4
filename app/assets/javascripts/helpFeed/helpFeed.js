@@ -5,12 +5,16 @@ angular.module("helpFeed",
 .config(function ($routeProvider) {
 
    $routeProvider
+        .when("/", {
+           templateUrl: "",
+           controller: "helpFeedCtrl"
+        })
         .when("/helpFeed", {
-            templateUrl: "views/welcome/index.html.erb",
+            templateUrl: "views/helpView/helpFeed.html",
             controller: "helpFeedCtrl"
         })
         .when("/helpFeed:id", {
-            templateUrl: "views/posts/show.html.erb",
+            templateUrl: "views/helpView/helpShow.html",
             controller: "helpFeedCtrl"
         })
         .otherwise({
