@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  respond_to :json, :html
   def index
     @posts = Post.all
     @post = Post.find params[:id]
   end
+
   def new
     @post = Post.new
   end
@@ -16,23 +18,25 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
   def edit
     @post = Post.find params[:id]
   end
+
   def update
     @post = Post.find params[:id]
     @post.update_attributes post_params
   end
+
   def destroy
     @post = Post.find params[:id]
     @Post.delete
   end
 
-private
-  def post_params
-    params.require(:post).permit(:problem, :user_id, :date, :location)
-  end
-end
+  private
+    def post_params
+      params.require(:post).permit(:problem, :user_id, :date, :location)
+    end
 
 
 end
