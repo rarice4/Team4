@@ -1,25 +1,32 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
+body {
   background-color: #29A7BC;
+  .alert {
+    font-size: 2em;
+    text-align: center;
+  }
 }
 
 .mainContainer {
+  background-color: #29A7BC;
+  .welcome {
+    text-align:center;
+    font-size: 4em;
+  }
   .logIn {
     text-align:center;
-    font-size: 2em;
-    background-color: #29A7BC;
+    font-size: 3em;
   }
 
   .logInForm {
     margin-right: auto;
     margin-left: auto;
-    width: 50%;
+    width: 25%;
     background-color: #D5FFED;
     border-radius: 5px;
-    .emailField, .passwordField, .submitField {
-      width: 200px;
-    }
+    font-size: 1.5em;
+    text-align: center;
   }
 }
