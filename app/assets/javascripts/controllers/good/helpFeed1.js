@@ -1,6 +1,3 @@
-#= require_self
-#= require_tree ./controllers/helpFeed
-
 angular.module("helpFeed",
    ["ngRoute"
     ])
