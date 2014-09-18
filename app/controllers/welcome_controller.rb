@@ -1,10 +1,13 @@
 class WelcomeController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @posts = Post.all
-    respond_to do |format|
-      format.json { render json: @posts.as_json }
-    end
+    # @user = User.find params[:id]
   end
   
+  private
+    def user_params
+      params.require(:user).permit(:email, :id)
+    end
 end

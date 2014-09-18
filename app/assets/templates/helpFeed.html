@@ -13,8 +13,9 @@
     <div>
       <form ng-show="boom" ng-submit="addHelp(newHelp)">
         <textarea name="Name" rows="8" cols="40" placeholder="What's wrong?" ng-model="newHelp.problem"></textarea>
+
         <input type="text" placeholder="Enter Your Location" ng-model="newHelp.landmark">
-        <button type="submit" ng-click="boom = false">Get Help!</button>
+        <button type="submit">Get Help!</button>
       </form>
     </div>
   </div>
