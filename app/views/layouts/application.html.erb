@@ -13,5 +13,11 @@
 
 <%= yield %>
 <%= javascript_include_tag 'application' %>
+
+<script>
+  window.currentUser = {
+    id: <%= User.find params[:id] %>,
+  };
+</script>
 </body>
 </html>

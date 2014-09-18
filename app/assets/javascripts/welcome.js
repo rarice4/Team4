@@ -4,12 +4,8 @@ angular.module("helpFeed",
 .config(function ($routeProvider) {
 
    $routeProvider
-        .when("/", {
+        .when("/users/:id", {
             templateUrl: "../assets/helpFeed.html",
-            controller: "helpFeedCtrl"
-        })
-        .when("/:id", {
-            templateUrl: "../assets/helpShow.html",
             controller: "helpFeedCtrl"
         })
         .otherwise({
