@@ -13,11 +13,13 @@
 
 <%= yield %>
 <%= javascript_include_tag 'application' %>
-
+<% if current_user %>
 <script>
   window.currentUser = {
     id: <%= current_user.id %>,
   };
 </script>
+<%end%>
+
 </body>
 </html>
