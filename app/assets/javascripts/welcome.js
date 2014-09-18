@@ -4,7 +4,7 @@ angular.module("helpFeed",
 .config(function ($routeProvider) {
 
    $routeProvider
-        .when("/users/:id", {
+        .when("/", {
             templateUrl: "../assets/helpFeed.html",
             controller: "helpFeedCtrl"
         })
