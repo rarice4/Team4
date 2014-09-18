@@ -1,6 +1,7 @@
 angular.module("helpFeed")
     .controller("helpFeedCtrl", function ($scope,$log,$location, $routeParams, $rootScope, $route, helpFeedSvc) {
       $scope.currentUser = currentUser;
+      $scope.allposts = allposts;
       console.log($scope.currentUser);
       $scope.helps = [];
       helpFeedSvc.getHelps().then(function (helps) {
