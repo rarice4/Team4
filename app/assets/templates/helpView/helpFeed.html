@@ -1,0 +1,38 @@
+<!-- Header of the page -->
+<header>
+  <h2>Hello!</h2>
+  <a href="#"><button name="button">LOGOUT</button></a>
+</header>
+
+<hr>
+
+<!-- Submit form and helpfeed -->
+<div class="container">
+  <div class="row">
+    <button ng-click="help = true" ng-hide="help">Need Help?</button>
+    <div>
+      <form ng-show="help" ng-submit="addHelp(newHelp)">
+        <textarea name="Name" rows="8" cols="40" placeholder="What's wrong?" ng-model="newHelp.problem"></textarea>
+        <input type="text" placeholder="Enter Your Location" ng-model="newHelp.landmark">
+        <button type="submit" ng-click="help = false">Get Help!</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <h2>Help, we need somebody!</h2>
+      <div>
+        <ul>
+          <li ng-repeat="help in helps">
+            <h4>UserName</h4>
+            <span>{{help.date}}</span>
+            <p>
+              {{help.problem}}
+            </p>
+            <button>Learn More</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
