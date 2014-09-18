@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find params[:user_id]
     @posts = Post.all
-    @post = Post.find params[:id]
+  
     respond_to do |format|
       format.json { render json: @user.posts.as_json }
     end
@@ -13,6 +13,9 @@ class PostsController < ApplicationController
     @user = User.find params[:user_id]
     @post = Post.new
 
+  end
+  def show
+    @posts = Post.all
   end
 
 
@@ -53,6 +56,12 @@ class PostsController < ApplicationController
     @Post.delete
     respond_to do |format|
       format.json { render json: @user.post.as_json }
+    end
+  end
+  def all
+    @posts = Post.all
+    respond_to do |format|
+      format.json { render json: @posts.as_json }
     end
   end
 
