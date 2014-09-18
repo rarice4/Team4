@@ -18,6 +18,9 @@
   window.currentUser = {
     id: <%= current_user.id %>,
   };
+  window.allposts = {
+    allposts: <%= Post.all %>
+  };
 </script>
 </body>
 </html>
