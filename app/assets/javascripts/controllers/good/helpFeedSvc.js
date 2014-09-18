@@ -13,7 +13,7 @@ angular.module("helpFeed")
 
       var addHelp = function (help,id) {
         console.log(help);
-      $http.post(urlHelp + id + "/posts" + "/new", help).then(function (response) {
+      $http.post(urlHelp + id + "/posts", help).then(function (response) {
         $rootScope.$broadcast("help:added");
         $log.info("help:added");
         });

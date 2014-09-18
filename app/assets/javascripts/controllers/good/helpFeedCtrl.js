@@ -12,7 +12,7 @@ angular.module("helpFeed")
       });
 
 
-      $scope.addHelp = function (helpObj) {
+      $scope.addHelp = function (helpObj, id) {
         var newHelp = {
           date:new Date(),
           problem:helpObj.problem,
