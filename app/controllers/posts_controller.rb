@@ -1,18 +1,28 @@
 class PostsController < ApplicationController
-  respond_to :json, :html
+  
   def index
+    @user = User.find params[:id]
     @posts = Post.all
     @post = Post.find params[:id]
+    respond_to do |format|
+      format.json { render json: @user.posts.as_json }
+    end
   end
 
   def new
+    @user = User.find params[:id]
     @post = Post.new
     
   end
   
 
   def create
+    @user = User.find params[:id]
     @post = Post.create post_params
+    respond_to do |format|
+      format.json { render json: @user.post.as_json }
+    end
+
     if @post.save
     
     else
@@ -21,17 +31,29 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @user = User.find params[:id]
     @post = Post.find params[:id]
+    respond_to do |format|
+      format.json { render json: @user.post.as_json }
+    end
   end
 
   def update
+    @user = User.find params[:id]
     @post = Post.find params[:id]
     @post.update_attributes post_params
+    respond_to do |format|
+      format.json { render json: @user.post.as_json }
+    end
   end
 
   def destroy
+    @user = User.find params[:id]
     @post = Post.find params[:id]
     @Post.delete
+    respond_to do |format|
+      format.json { render json: @user.post.as_json }
+    end
   end
 
   private

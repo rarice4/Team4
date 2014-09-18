@@ -5,14 +5,10 @@ angular.module("helpFeed",
 
    $routeProvider
         .when("/", {
-            templateUrl: "../assets/main.html",
-            controller: "helpFeedCtrl"
-        })
-        .when("/helpFeed", {
             templateUrl: "../assets/helpFeed.html",
             controller: "helpFeedCtrl"
         })
-        .when("/helpFeed:id", {
+        .when("/:id", {
             templateUrl: "../assets/helpShow.html",
             controller: "helpFeedCtrl"
         })
