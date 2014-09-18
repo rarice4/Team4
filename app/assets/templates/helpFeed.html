@@ -9,12 +9,12 @@
 <!-- Submit form and helpfeed -->
 <div class="container">
   <div class="row">
-    <button ng-click="help = true" ng-hide="help">Need Help?</button>
+    <button ng-click="boom = true" ng-hide="boom">Need Help?</button>
     <div>
-      <form ng-show="help" ng-submit="addHelp(newHelp)">
+      <form ng-show="boom" ng-submit="addHelp(newHelp)">
         <textarea name="Name" rows="8" cols="40" placeholder="What's wrong?" ng-model="newHelp.problem"></textarea>
         <input type="text" placeholder="Enter Your Location" ng-model="newHelp.landmark">
-        <button type="submit" ng-click="help = false">Get Help!</button>
+        <button type="submit" ng-click="boom = false">Get Help!</button>
       </form>
     </div>
   </div>
