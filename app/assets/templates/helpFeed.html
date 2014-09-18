@@ -24,8 +24,8 @@
       <h2>Help, we need somebody!</h2>
       <div>
         <ul>
-          <li ng-repeat="help in helps">
-            <h4>UserName</h4>
+          <li ng-repeat="help in allposts">
+            <h4>{{help.user}}</h4>
             <span>{{help.date}}</span>
             <p>
               {{help.problem}}
