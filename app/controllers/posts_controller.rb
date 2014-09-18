@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  
+
   def index
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @posts = Post.all
     @post = Post.find params[:id]
     respond_to do |format|
@@ -10,28 +10,28 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @post = Post.new
-    
+
   end
-  
+
 
   def create
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @post = Post.create post_params
     respond_to do |format|
       format.json { render json: @user.post.as_json }
     end
 
     if @post.save
-    
+
     else
       render :new
     end
   end
 
   def edit
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @post = Post.find params[:id]
     respond_to do |format|
       format.json { render json: @user.post.as_json }
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @post = Post.find params[:id]
     @post.update_attributes post_params
     respond_to do |format|
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @user = User.find params[:id]
+    @user = User.find params[:user_id]
     @post = Post.find params[:id]
     @Post.delete
     respond_to do |format|

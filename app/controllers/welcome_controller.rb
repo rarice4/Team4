@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
     @posts = Post.all
     # @user = User.find params[:id]
   end
-  
+
   private
     def user_params
       params.require(:user).permit(:email, :id)
