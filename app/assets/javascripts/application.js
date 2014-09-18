@@ -17,6 +17,6 @@
 
 //= require bootstrap.min.js
 //= require welcome
-//= require controllers/good/helpFeed1
+//= require welcome.js
 
 //= require_tree .
